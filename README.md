@@ -1,77 +1,86 @@
 # Evochron Legacy SE Translation Helper
 
-A Python-based tool for extracting, translating, and applying translations to Evochron Legacy SE game files. This tool simplifies the process of localizing the game by providing an easy way to manage game text.
+A powerful Python tool for translating Evochron Legacy SE game files. Easily extract, translate, and apply translations while preserving the game's file structure.
 
-## Features
+## 🌟 Features
 
-- Extract text from various game files (`text.dat`, `systemdata.dat`, `itemdata.dat`, `optionsdata.dat`, `techdata.dat`, `traintext.sw`)
-- Support for multiple file formats and structures
-- Built-in Google Translate integration for automatic translations
-- Preserves original file structure when applying translations
-- User-friendly console interface with progress tracking
-- Creates backups of original files before making changes
+- Extract text from game files in `media/` directory
+- Support for multiple file types with different formats
+- Built-in Google Translate integration
+- Preserves original file structure
+- User-friendly console interface
+- Automatic backup system
 
-## Requirements
+## 📋 Requirements
 
-- Python 3.7 or higher
+- Python 3.7+
 - pip (Python package manager)
+- Game files in `media/` directory
 
-## Installation
+## 🚀 Quick Start
 
-1. Clone or download this repository
-2. Install the required Python packages:
+1. **Install Requirements**
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
+2. **Prepare Your Game Files**
+   - Navigate to your Evochron Legacy SE installation directory
+   - Locate the `media` folder containing the game files
+   - Place `translate_helper.py` in the same directory as the `media` folder
 
-1. Place the script in your Evochron Legacy SE game directory (where the `.dat` files are located)
-2. Run the script:
+3. **Run the Tool**
    ```bash
    python translate_helper.py
    ```
-3. Follow the on-screen menu:
-   - **Option 1**: Extract text from game files (creates JSON files in the `translation` directory)
-   - **Option 2**: Apply translations from JSON files back to game files
-   - **Option 3**: Auto-translate extracted text using Google Translate
-   - **Option 4**: Exit the program
 
-## File Structure
+## 🎮 Usage Guide
 
-- `translate_helper.py`: Main script file
-- `translation/`: Directory containing extracted text in JSON format
-- `*.bak`: Backup files created when applying translations
+### 1. Extracting Text
+- Select option 1 to extract text from all supported files
+- JSON files will be created in the `translation` directory
+- Each file corresponds to a game file in the `media` folder
 
-## Translation Process
+### 2. Translating Text
+- **Manual**: Edit the JSON files in the `translation` directory
+- **Auto-translate**: Use option 3 for Google Translate
 
-1. **Extract Text**: Run the script and select option 1 to extract all translatable text
-2. **Translate**:
-   - Edit the JSON files in the `translation` directory manually, or
-   - Use option 3 for automatic translation (requires internet connection)
-3. **Apply Translations**: Run the script and select option 2 to apply your translations
+### 3. Applying Translations
+- Select option 2 to apply your translations
+- Original files will be backed up with `.bak` extension
+- Check the console for progress and any warnings
 
-## Supported File Types
+## 📁 File Locations
 
-- `text.dat`: General game text and UI strings
-- `systemdata.dat`: System names and descriptions
-- `itemdata.dat`: Item names and descriptions
-- `optionsdata.dat`: Options and menu text
-- `techdata.dat`: Technical data and specifications
-- `traintext.sw`: Tutorial and training text
+Game files are located in the `media/` directory:
+- `media/text.dat`
+- `media/systemdata.dat`
+- `media/itemdata.dat`
+- `media/optionsdata.dat`
+- `media/techdata.dat`
+- `media/traintext.sw`
 
-## Notes
+## ⚠️ Important Notes
 
-- Always back up your game files before making changes
-- The script creates `.bak` files when applying translations
-- For best results, review auto-translated text before applying
-- Some text might require manual adjustment for context
-- At this time the tool is not complete and may have errors such as text that does not grab well.
+1. **Backup Your Game Files**
+   - The tool creates `.bak` files, but it's good practice to create your own backup
 
-## Contributing
+2. **Auto Translation Quality**
+   - Auto-translation provides a good starting point
+   - Review all translations for accuracy and context
+   - Some game-specific terms may need manual adjustment
+3. **File Permissions**
+   - Ensure you have write permissions for the game directory
+   - Run as administrator if needed
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 🤝 Contributing
 
-## Disclaimer
+Contributions are welcome! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
 
-This tool is not affiliated with or endorsed by StarWraith 3D Games LLC. Evochron Legacy is a registered trademark of StarWraith 3D Games LLC.
+## ⚠️ Disclaimer
+At this time the tool is not complete and may have errors such as text that does not grab well.
+
+This is an fan tool not affiliated with or endorsed by StarWraith 3D Games LLC
